@@ -1,4 +1,6 @@
-Интерфейс фотостока [Demo](https://test-r-u.herokuapp.com/) на основе API Unsplash.
+Интерфейс фотостока  на основе API Unsplash.<br />
+
+[Demo](https://test-r-u.herokuapp.com/)<br />
 
 В интерфейсе присутствует:<br />
 — Главная страница со списком<br />
