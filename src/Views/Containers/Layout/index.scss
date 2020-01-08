@@ -1,0 +1,16 @@
+@import "../../GlobalStyles/mixins";
+
+.page__wrapper{
+  box-sizing: border-box;
+  width: 1482px;
+  margin: 0 auto;
+
+  @include r(1481){
+    width: 100%;
+    padding: 0 22px;
+  }
+
+  @include r(768){
+    width: 100%;
+  }
+}

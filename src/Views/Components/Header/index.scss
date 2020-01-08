@@ -1,0 +1,174 @@
+@import "../../GlobalStyles/mixins";
+
+.top-menu{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #000;
+  padding: 25px 0;
+
+  .top-menu__inner_wrapper{
+    width: 1482px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+
+    @include r(1480) {
+      width: 100%;
+      padding: 0 22px;
+    }
+
+    .links{
+      display: flex;
+
+      a{
+        position: relative;
+        margin-right: 40px;
+        line-height: 1;
+
+        &:last-child{
+          margin-right: 0;
+        }
+
+        &:after{
+          content: '';
+          position: absolute;
+          width: 0;
+          height: 3px;
+          background-color: #fff;
+          bottom: -4px;
+          right: 0;
+          @include transite(all);
+        }
+
+        &:hover{
+
+          &:after{
+            width: 30%;
+          }
+        }
+      }
+    }
+
+    a{
+      display: flex;
+      align-items: center;
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+
+  .link__text{
+    margin-left: 10px;
+
+    @include r(768){
+      display: none;
+    }
+  }
+
+  .search__from{
+    width: 1200px;
+    height: 0;
+    color: #fff;
+    visibility: hidden;
+    @include transite(all, .5s);
+
+    @include r(1199){
+      width: 100%;
+    }
+
+    &.show{
+      height: auto;
+      visibility: visible;
+    }
+
+    .search-input{
+      color: #fff;
+    }
+
+    .form{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 40px;
+
+      .search-input{
+        background: none;
+        border: 0;
+        font-size: 72px;
+        line-height: 86px;
+        text-align: center;
+        outline: none;
+
+        &::placeholder{
+          color: #fff;
+        }
+
+        @include r(768){
+          width: 100%;
+          font-size: 36px;
+          line-height: 43px;
+          color: #FFFFFF;
+        }
+      }
+    }
+
+    .line {
+
+      @include r(1199){
+        width: 100%;
+
+        svg{
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .history-search{
+    width: 1200px;
+    height: 0;
+    color: #fff;
+    visibility: hidden;
+    @include transite(all, .5s);
+
+    @include r(1199){
+      width: 100%;
+    }
+
+    &.show{
+      //height: 200px;
+      height: auto;
+      visibility: visible;
+    }
+
+    .history__title{
+      font-size: 36px;
+      line-height: 43px;
+      color: #FFFFFF;
+      text-align: center;
+      margin-top: 60px;
+      margin-bottom: 45px;
+    }
+
+    .tags{
+
+      ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        overflow: unset;
+
+        &:after{
+          display: none;
+        }
+
+        li{
+          margin-bottom: 10px;
+        }
+
+      }
+    }
+  }
+}

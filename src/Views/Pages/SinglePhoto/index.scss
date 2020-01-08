@@ -1,0 +1,208 @@
+@import "../../GlobalStyles/mixins";
+
+.photo__outer-wrapper{
+  position: relative;
+
+  .photo__background{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: blur(8px);
+    background-position: center;
+    z-index: -1;
+  }
+
+  .photo__inner-wrapper{
+    width: 1482px;
+    margin: 0 auto;
+
+    @include r(1481){
+      width: 100%;
+    }
+
+    .photo__top{
+      padding-top: 45px;
+      padding-bottom: 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @include r(768){
+        padding-right: 22px;
+        padding-left: 22px;
+        flex-wrap: wrap;
+      }
+
+      .photo__user a{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #fff;
+
+        .photo__avatar img{
+          width: 54px;
+          height: 54px;
+          border: 1px solid #FFFFFF;
+          border-radius: 8px;
+          margin-right: 10px;
+        }
+
+        .photo__user-right{
+          font-size: 30px;
+          color: #fff;
+
+          @include r(768){
+            font-size: 15px;
+          }
+        }
+
+        .photo__user-nickname{
+          font-size: 15px;
+          margin-bottom: 5px;
+        }
+      }
+
+      .photo__actions{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .photo__like{
+          width: 50px;
+          height: 50px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: #FFFFFF;
+          box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+          border-radius: 8px;
+          margin-right: 20px;
+
+          &:hover{
+            cursor: pointer;
+
+            svg path{
+              fill: #f15151;
+            }
+          }
+
+          &.liked {
+            svg path{
+              fill: #f15151;
+            }
+          }
+
+          svg path{
+            fill: #828282;
+
+            &:hover{
+              fill: #f15151;
+            }
+          }
+        }
+
+        .photo__download{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 205px;
+          height: 50px;
+          background: #219653;
+          border: 1px solid #219653;
+          box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+          border-radius: 8px;
+
+          @include r(768){
+            width: 50px;
+          }
+
+          .photo__download-text{
+            color: #fff;
+            font-size: 20px;
+            margin-left: 12px;
+
+            @include r(768){
+              display: none;
+            }
+
+            &:hover{
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+
+    .photo__single{
+      height: 700px;
+      text-align: center;
+      //width: 1482px;
+
+      @include r(768){
+        height: auto;
+        padding: 0 22px;
+      }
+
+      img{
+        height: 100%;
+        object-fit: contain;
+        background: linear-gradient(0deg, rgba(40, 36, 22, 0.08), rgba(40, 36, 22, 0.08)), #FFFFFF;
+        box-shadow: 0 4px 100px #000000;
+        border-radius: 8px;
+        box-sizing: border-box;
+
+        @include r(768){
+          width: 100%;
+          background: none;
+          height: auto;
+        }
+      }
+    }
+
+    .photo__tags{
+
+      .tag__title{
+        font-size: 24px;
+        line-height: 29px;
+        color: #FFFFFF;
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 20px;
+      }
+
+      .tags{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding-bottom: 40px;
+
+        .tag{
+          margin: 0 10px;
+          background: #fff;
+          border-radius: 8px;
+          font-size: 18px;
+          line-height: 21px;
+          color: #828282;
+          padding: 5px 10px;
+          margin-bottom: 25px;
+
+          &:hover{
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+.similar__photos{
+  font-size: 36px;
+  line-height: 43px;
+  color: #000000;
+  margin-top: 80px;
+  //margin-bottom: 48px;
+}

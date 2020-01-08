@@ -1,0 +1,16 @@
+@import "../../GlobalStyles";
+
+.likes__title{
+  font-size: 72px;
+  line-height: 86px;
+  color: #000000;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 100px;
+
+  @include r(768){
+    font-size: 36px;
+    line-height: 43px;
+    margin-top: 20px;
+  }
+}

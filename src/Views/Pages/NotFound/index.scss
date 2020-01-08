@@ -1,0 +1,25 @@
+@import "../../GlobalStyles/mixins";
+
+.not-found{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .not-found__wrapper{
+    text-align: center;
+    font-size: 72px;
+    line-height: 86px;
+    color: #000000;
+    font-weight: bold;
+    margin-top: 100px;
+
+    .not-found__text{
+      font-size: 35px;
+    }
+
+    a{
+      font-size: 20px;
+      text-decoration: underline;
+    }
+  }
+}

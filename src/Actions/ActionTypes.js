@@ -1,0 +1,8 @@
+export const GET_PHOTOS = 'GET_PHOTOS';
+export const GET_PHOTO = 'GET_PHOTO';
+export const GET_LIKED_PHOTOS = 'GET_LIKED_PHOTOS';
+export const GET_SEARCHED_PHOTOS = 'GET_SEARCHED_PHOTOS';
+export const GET_RELATIVE_PHOTOS = 'GET_RELATIVE_PHOTOS';
+export const LIKE_PHOTO = 'LIKE_PHOTO';
+export const UNLIKE_PHOTO = 'UNLIKE_PHOTO';
+export const ADD_TO_HISTORY = 'ADD_TO_HISTORY';
