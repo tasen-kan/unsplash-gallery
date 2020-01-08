@@ -1,4 +1,4 @@
-Интерфейс фотостока  на основе API Unsplash.<br />
+<b>Интерфейс фотостока  на основе API Unsplash.</b><br />
 
 [Demo](https://test-r-u.herokuapp.com/)<br />
 
